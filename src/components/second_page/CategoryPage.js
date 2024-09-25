@@ -9,14 +9,17 @@ import image6 from "../../images/category/feature icons-09.png";
 import { Box, Card, Container, Typography } from "@mui/material";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import ChatField from "./ChatField";
-import SoilTestCard from "./page";
+import { Link } from "react-router-dom";
 
 const CategoryPage = () => {
   return (
     <Box sx={{ bgcolor: "#f2f2f2" }}>
       <NavBar />
 
-      {/* <Container maxWidth="lg" sx={{ textAlign: "center", position: "relative" }}>
+      <Container
+        maxWidth="lg"
+        sx={{ textAlign: "center", position: "relative" }}
+      >
         <Box
           sx={{
             // height: { xs: "60vh", },
@@ -30,7 +33,7 @@ const CategoryPage = () => {
             sx={{
               my: 1,
               color: "black",
-              fontSize: { xs: "16px", },
+              fontSize: { xs: "16px" },
               fontWeight: "bold",
               textAlign: "center",
             }}
@@ -56,39 +59,41 @@ const CategoryPage = () => {
                   borderRadius: "10px",
                 }}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "column",
-                  }}
-                >
-                  <Box sx={{ display: "flex", justifyContent: "center" }}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        borderRadius: "8px",
-                        width: {  xs: "65px" },
-                        backgroundColor: item?.bgcolor || "#e0f7fa", // Provide default background color
-                      }}
-                    >
-                      <img width="100%" src={item.image} alt={item.title} />
-                    </Box>
-                  </Box>
-                  <Typography
+                <Link to={item.linkPage} style={{textDecoration:'none'}}>
+                  <Box
                     sx={{
-                      mt: 1,
-                      color: "black",
-                      fontSize: { xs: "14px" },
-                      textAlign: "center",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
                     }}
                   >
-                    {item.title}
-                  </Typography>
-                </Box>
+                    <Box sx={{ display: "flex", justifyContent: "center" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          borderRadius: "8px",
+                          width: { xs: "65px" },
+                          backgroundColor: item?.bgcolor || "#e0f7fa", // Provide default background color
+                        }}
+                      >
+                        <img width="100%" src={item.image} alt={item.title} />
+                      </Box>
+                    </Box>
+                    <Typography
+                      sx={{
+                        mt: 1,
+                        color: "black",
+                        fontSize: { xs: "14px" },
+                        textAlign: "center",
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                  </Box>
+                </Link>
               </Card>
             ))}
           </Box>
@@ -97,7 +102,7 @@ const CategoryPage = () => {
             sx={{
               mt: 2,
               color: "#8098ab",
-              fontSize: { xs: "16px"},
+              fontSize: { xs: "16px" },
               textAlign: "center",
               display: "flex",
               alignItems: "center",
@@ -107,11 +112,8 @@ const CategoryPage = () => {
             Show More <ExpandMoreRoundedIcon sx={{ fontSize: "26px", ml: 1 }} />
           </Typography>
         </Box>
-      </Container> */}
-
-      <SoilTestCard/>
-
-     <ChatField/>
+      </Container>
+      {/* <ChatField/> */}
     </Box>
   );
 };
@@ -120,10 +122,46 @@ export default CategoryPage;
 
 // Data for categories
 const categoryData = [
-  { id: 1, image: image1, title: "Crop Disease", bgcolor: "#e0f7fa" },
-  { id: 2, image: image2, title: "Soil Test", bgcolor: "#fff9c4" },
-  { id: 3, image: image3, title: "Crop Doctor", bgcolor: "#ffccbc" },
-  { id: 4, image: image4, title: "Weather Insurance", bgcolor: "#f0ffbf" },
-  { id: 5, image: image5, title: "Farm Monitoring", bgcolor: "#f0ffbf" },
-  { id: 6, image: image6, title: "Weather Forecast", bgcolor: "#d4f5ff" },
+  {
+    id: 1,
+    image: image1,
+    title: "Crop Disease",
+    bgcolor: "#e0f7fa",
+    linkPage: "",
+  },
+  {
+    id: 2,
+    image: image2,
+    title: "Soil Test",
+    bgcolor: "#fff9c4",
+    linkPage: "soil_test",
+  },
+  {
+    id: 3,
+    image: image3,
+    title: "Crop Doctor",
+    bgcolor: "#ffccbc",
+    linkPage: "",
+  },
+  {
+    id: 4,
+    image: image4,
+    title: "Weather Insurance",
+    bgcolor: "#f0ffbf",
+    linkPage: "",
+  },
+  {
+    id: 5,
+    image: image5,
+    title: "Farm Monitoring",
+    bgcolor: "#f0ffbf",
+    linkPage: "",
+  },
+  {
+    id: 6,
+    image: image6,
+    title: "Weather Forecast",
+    bgcolor: "#d4f5ff",
+    linkPage: "",
+  },
 ];

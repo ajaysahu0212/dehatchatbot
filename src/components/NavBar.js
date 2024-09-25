@@ -39,7 +39,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "#fff", py: 0.5 }}>
+    <AppBar position="sticky" sx={{top:'0', bgcolor: "#fff", py: 0.5, px:1 , zIndex:5222}}>
       {/* <Container maxWidth="xl"> */}
         <Toolbar disableGutters sx={{ display: "flex", alignItems: "center" }}>
           <Box sx={{ display: "flex", alignItems: "center", flexGrow: 0 }}>

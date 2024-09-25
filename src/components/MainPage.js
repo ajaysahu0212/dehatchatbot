@@ -8,7 +8,7 @@ const MainPage = () => {
     <Box
       sx={{
         textAlign: "center",
-        backgroundColor: "#f5f5f5",
+        // backgroundColor: "#f5f5f5",
         // minHeight: "100vh",
       }}
     >

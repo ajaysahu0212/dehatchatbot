@@ -10,9 +10,9 @@ import { Mic } from "@mui/icons-material";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 
-const ChatField = () => {
+const ChatField = ({message, setMessage}) => {
   // State to hold the typed message
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   // State to hold all messages
   const [messages, setMessages] = useState([]);
@@ -72,7 +72,6 @@ const ChatField = () => {
           fullWidth
           placeholder="Ask a question..."
           variant="outlined"
-          multiline
           size="small"
           value={message}
           onKeyDown={(e) => {

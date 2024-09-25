@@ -5,12 +5,12 @@ import NotFound from "./NotFound";
 import CategoryPage from "./components/second_page/CategoryPage";
 import LoginSignUpPage from "./components/login_sign_up/SignUpPage";
 import FirstLoginSignUpPage from "./components/login_sign_up/FirstLoginSignUpPage";
-import ChatBot from "./components/ChatBot";
+import ChatBot from "./components/chatbot/ChatBot";
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/category" element={<CategoryPage />} />
@@ -18,9 +18,9 @@ function App() {
           <Route path="/login_signup" element={<LoginSignUpPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router>
+      </Router> */}
 
-      {/* <ChatBot/> */}
+      <ChatBot/>
     </>
   );
 }
