@@ -6,6 +6,7 @@ import CategoryPage from "./components/second_page/CategoryPage";
 import LoginSignUpPage from "./components/login_sign_up/SignUpPage";
 import FirstLoginSignUpPage from "./components/login_sign_up/FirstLoginSignUpPage";
 import ChatBot from "./components/chatbot/ChatBot";
+import MainChatComponent from "./components/chatbot/MainChatComponent";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </Router> */}
 
       <ChatBot/>
+      {/* <MainChatComponent/> */}
     </>
   );
 }
